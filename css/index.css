@@ -240,12 +240,14 @@ address{
 
     header .logo{
         width: 100%;
-        margin: 4% 0 5% 0;
+        margin: 4% 0 8% 0;
         text-align: center;
     }
 
     header .logo img{
-        height: 135%;
+        height: 3.8rem;
+        width: 20rem;
+        margin-left: 4rem;
     }
 
     /* Hero Card */
@@ -282,6 +284,7 @@ address{
 }
 /* End Tablet View */
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Mobile */
 @media (max-width: 500px){
@@ -389,6 +392,7 @@ address{
         width: 100%;
     }
     
+
     
 }
 /* End Mobile View */
