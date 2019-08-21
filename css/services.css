@@ -1,3 +1,4 @@
+
 .services-intro{
 	display: flex;
 	flex-direction: column;
@@ -112,4 +113,99 @@
 	font-size: 3.5vh;
 	font-weight: bold;
 	font-family: 'Titillium Web', sans-serif;
+}
+
+@media (max-width: 800px){
+
+    .some-facts-container img{
+        display: none;
+    }
+    .some-facts-container{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 4rem;
+        border-bottom: 3px black solid;
+    }
+
+    .some-facts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .some-facts h2{
+        margin-top: 1.5rem;
+        width: 70vw;
+        font-size: 3.2rem;
+    }
+
+    .some-facts h2, .some-facts p{
+        text-align: center;
+    }
+
+    .some-facts p{
+        width: 65vw;
+        font-size: 2.25rem;
+    }
+
+    .some-facts ul li{
+        font-size: 2.25rem;
+    }
+
+}
+
+@media (max-width: 500px){
+    
+    .services-intro{
+        justify-content: flex-start;
+        margin: 0;
+        text-align: center;
+    }
+
+    .services-intro h1{
+        font-size: 3.5rem;
+    }
+
+    .services-intro p{
+        font-size: 2rem;
+        margin-bottom: 25%;
+    }
+
+    .services-header-img{
+        display: flex;
+        height: 50%;
+        width: 100vw;
+        margin-left: -7%;
+        margin-top: 2rem;
+    }
+
+    .service-box{
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .service-box h2{
+        font-size: 3rem;
+    }
+
+    .service-box button{
+        width: 60%;
+        font-size: 2rem;
+        margin-bottom: 0.5%;
+    }
+
+    .some-facts{
+        margin-top: -15%;
+    }
+
+    .some-facts ul li{
+        font-size: 80%;
+    }
+
+    .copyright-at-services{
+        font-size: 1.8rem;
+        margin: 0;
+        font-style: italic; 
+    }
+
 }
