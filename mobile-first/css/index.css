@@ -220,42 +220,162 @@ h1, h2, h3, h4, h5 {
 
 /* Tablet */
 @media (min-width: 500px){
-    /* Header / Nav */
+
+        /* Hero / Nav */
+        header{
+            width: 100%;
+            display: flex; 
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 0;
+            margin-left: 0;
+        }
+    
+        header .logo{
+            width: 60%;
+            margin: 4% 0 0 0;
+        }
+    
+        header .logo img{
+            height: 3rem;
+            width: 10rem;
+        }
+    
+        header .nav-list{
+            display: flex;
+            width: 90vw;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 0;
+            border-top: none;
+        }
+    
+        header .nav-list li{
+            display: flex;
+            width: initial;
+            flex-direction: column;
+            height: 6rem;
+            justify-content: center;
+            align-items: center;
+            border-bottom: none;
+        }
+    
+        header .nav-list li a{
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-decoration: none;
+            color:  #7e7373a4;
+        }
 
     /* Hero Card */
-    .hero{
-        padding: 3rem 0;
-    }
+        .hero{
+            padding: 3rem 0;
+        }
 
-    .hero .hero-text{
-        margin: 0;
-    }
+        .hero .hero-text{
+            margin: 0;
+        }
 
-    .hero button{
-        margin-top: 1rem;
-        font-size: 3rem;
-        height: 4rem;
-        width: 18rem;
-        margin-bottom: 5vmin;
-    }
+        .hero button{
+            margin-top: 1rem;
+            font-size: 3rem;
+            height: 4rem;
+            width: 18rem;
+            margin-bottom: 5vmin;
+        }
 
-    /* Info */
-    .inline-section p, footer address, .copyright{
-        display: inline-block;
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
+        .hero, .info-section{
+            margin-right: 10%;
+        }
 
-    .middle-img{
-        width: 91%;
-        height: 8rem;
-        padding: 0;
-        margin: 0;
-    }
+        /* Info */
+        .info-section{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+        }
+        
+        
+        .inline-section p, footer address, .copyright{
+            display: inline-block;
+            font-size: 3.2vmin;
+            line-height: 1.25em;
+        }
+        
+        .middle-img{
+            width: 90vw;
+        }
+        
+        .first-row, .second-row{
+            display: flex;
+            flex-basis: 90vw;
+            justify-content: space-between;
+            margin: 3% 0;
+        }
+        
+        .second-row{
+            border-bottom: 3px black solid;
+            padding-bottom: 3%;
+        }
+        
+        .second-row section{
+            width: 32%;
+        }
+        
 
-    .first-row .inline-section:first-child{
-        padding-right: 0.5rem;
-    }
+        .info-section{
+            padding-top: 1rem;
+            margin-left: 5%;
+            margin-right: 5%;
+            border-bottom: none;
+        }
+    
+        .first-row, .second-row{
+            flex-direction: row;
+            width: 98%;
+            padding: 0;
+        }
+    
+        .first-row{
+            margin-top: 0%;
+            margin-bottom: 4vmin;
+        }
+        
+        .first-row section, .second-row section{
+            margin-left: 0;
+        }
+        
+        
+        .first-row section h3, .second-row h3, footer h3{
+            font-size: 2rem;
+            margin-top: 2.25rem;
+        }
+        
+        .first-row section p, .second-row section p{
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 4vh;
+        }
+    
+        .second-row{
+            width: 90%;
+            padding-bottom: 1rem;
+        }
+        
+        .middle-img{
+            width: 98%;
+            height: 7rem;
+            padding: 0;
+            margin: 0;
+        }
+    
+        .second-row section{
+            width: 32%;
+        }
 }
 /* End Tablet View */
 
@@ -282,13 +402,16 @@ h1, h2, h3, h4, h5 {
 
     /* Header / Nav */
     header{
-        display: flex;
+        flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         margin-top: 2vh;
         margin-left: 2.5vmin;
     }
 
+    header .logo{
+        margin-top: -3%;
+    }
     .logo{
         margin-top: -1vh;
         height: 4vh;
