@@ -1,3 +1,399 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+html{
+    font-size: 67.5%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3{
+	font-size: 3vmin;
+}
+
+/* Header / Nav */
+header{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 2vh;
+    margin-left: 2.5vmin;
+}
+
+.logo{
+	margin-top: -1vh;
+	height: 4vh;
+}
+
+.logo img{
+    height: 4rem;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+
+nav a{
+	color:  #7e7373a4;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+	margin: 2vh 4vw;
+}
+
+nav a:visited{
+	color: #7e7373a4;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Hero Card */
+.hero{
+    display: flex;
+    width: 90vw;
+	justify-content: center;
+	align-items: center;
+	margin-top: 4vh;
+	padding-bottom: 10vh;
+	border-bottom: 3px black solid;
+	padding-top: 5vh;
+	font-size: 3vmin;
+}
+
+.hero-text{
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    margin-right: 4%;
+    margin-left: 14%;
+}
+
+.hero h1{
+	font-size: 7rem;
+	text-align: center;
+}
+
+.hero button{
+	font-size: 2.5rem;
+	background: white;
+	height: 4rem;
+	width: 17rem;
+	border-style: solid;
+	border-color: black;
+}
+
+.hero img{
+    height: 35rem;
+    margin-right: 8%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Info */
+.info-section{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: center;
+}
 
 
+.inline-section p, footer address, .copyright{
+	display: inline-block;
+	font-size: 3.2vmin;
+	line-height: 1.25em;
+}
+
+.middle-img{
+	width: 90vw;
+}
+
+.first-row, .second-row, footer{
+	display: flex;
+	flex-basis: 90vw;
+    justify-content: space-between;
+    margin: 3% 0;
+}
+
+.second-row{
+    border-bottom: 3px black solid;
+    padding-bottom: 3%;
+}
+
+.second-row section{
+    width: 32%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Footer / Contact / Copyright */
+footer{
+    margin: 0;
+    flex-direction: column;
+    width: 90vw;
+    align-items: flex-start;
+}
+
+address{
+	padding-top: 1em;
+}
+
+.communications{
+	margin-top: 1em;
+	line-height: 2em;
+}
+
+.copyright{
+    width: 90vw;
+	text-align: center;
+}
+/* End Baseline / Desktop View */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Media Queries / Responsive Designs */
+
+
+/* Tablet */
+@media (max-width: 800px){
+    /* Header / Nav */
+    header{
+        width: 100%;
+        display: flex; 
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    header .logo{
+        width: 100%;
+        margin: 4% 0 8% 0;
+        text-align: center;
+    }
+
+    header .logo img{
+        height: 3.8rem;
+        width: 20rem;
+        margin-left: 4rem;
+    }
+
+    /* Hero Card */
+    .hero{
+        padding: 3rem 0;
+    }
+
+    .hero .hero-text{
+        margin: 0;
+    }
+
+    .hero img{
+        display: none;
+    }
+
+    .hero button{
+        margin-top: 1rem;
+        font-size: 3rem;
+        height: 4rem;
+        width: 18rem;
+        margin-bottom: 5vmin;
+    }
+
+    /* Info */
+    .inline-section p, footer address, .copyright{
+        display: inline-block;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .first-row .inline-section:first-child{
+        padding-right: 0.5rem;
+    }
+}
+/* End Tablet View */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Mobile */
+@media (max-width: 500px){
+
+    /* Hero / Nav */
+    header .logo{
+        margin-top: 4%;
+        margin-bottom: 5%;
+    }
+
+    header .logo img{
+        height: 135%;
+    }
+
+    header .nav-list{
+        display: flex;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2%;
+        border-top: 1px black solid;
+    }
+
+    header .nav-list li{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        height: 6rem;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px black solid;
+    }
+
+    header .nav-list li a{
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        color:  #7e7373a4;
+    }
+
+    /* Hero Card */
+    .hero{
+        padding: 0.5rem 0 6rem 0;
+    }
+
+    .hero h1{
+        margin-top: 6vmin;
+        font-size: 7rem;
+    }
+
+    .hero button{
+        margin-top: 4vmin;
+        font-size: 6vmin;
+        height: 4rem;
+        width: 18rem;
+        margin-bottom: 5vmin;
+    }
+
+
+    /* Info */
+    .info-section{
+        padding-top: 1rem;
+    }
+
+    .first-row, .second-row{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .first-row{
+        margin-top: 0%;
+        margin-bottom: 4vmin;
+    }
+    
+    .first-row section, .second-row section{
+        margin-left: 0;
+    }
+    
+    
+    .first-row section h3, .second-row h3, footer h3{
+        font-size: 3rem;
+        margin-top: 5rem;
+    }
+    
+    .first-row section p, .second-row section p, footer address, .copyright{
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 4vh;
+    }
+
+    .second-row{
+        width: 90%;
+        padding-bottom: 4rem;
+    }
+    
+    .middle-img{
+        width: 91%;
+        height: 8rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .second-row section{
+        width: 100%;
+    }
+    
+
+    
+}
+/* End Mobile View */
