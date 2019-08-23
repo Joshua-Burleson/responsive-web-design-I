@@ -144,9 +144,9 @@ nav a:visited{
 }
 
 .hero button{
-	font-size: 4vmin;
+	font-size: 2.5rem;
 	background: white;
-	height: 8vh;
+	height: 4.5rem;
 	width: 65%;
 	border-style: solid;
 	border-color: black;
